@@ -100,7 +100,7 @@ app.MapPost("/receita", (Receita receita) => {
             SaslMechanism = SaslMechanism.Plain, // Mecanismo de autenticação (PLAIN)
             SaslUsername = "$ConnectionString", // Nome de usuário
             SaslPassword = "Endpoint=sb://trabalho-receitas.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=lB3cAFoIuKjkKoyVLI48YQvqNj8n6U5oo+AEhLeClIg=",
-            SslCaLocation = "/etc/ssl/certs/ca-certificates.crt", // Caminho para o certificado CA (pode variar dependendo do sistema)
+            //SslCaLocation = "/etc/ssl/certs/ca-certificates.crt", // Caminho para o certificado CA (pode variar dependendo do sistema)
         };
 
         using (var producer = new ProducerBuilder<Null, string>(config).Build())
