@@ -114,7 +114,7 @@ app.MapPost("/receita", (Receita receita) => {
 
             var deliveryReport = producer.ProduceAsync(topic, message).Result;
 
-            Console.WriteLine($"Enviado para a partição: {deliveryReport.Partition}, Offset: {deliveryReport.Offset}");
+            //Console.WriteLine($"Enviado para a partição: {deliveryReport.Partition}, Offset: {deliveryReport.Offset}");
         }
 })
 .WithName("CreateReceita");
